@@ -1,0 +1,171 @@
+.pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  .pt-sans-bold {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.pt-sans-regular-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.pt-sans-bold-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+  
+  /* Теги */
+body,
+ul,
+li,
+main,
+html {
+margin: 0;
+padding: 0;
+font-family: 'PT Sans';
+text-decoration: none;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: black;
+    background: #F2F2F2;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  
+  .wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    min-height: 100%;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+.filter {
+    background: url(/img/catalog-bg.png);
+    color: white;
+    
+}
+.filter__content {
+    display: flex;
+    padding: 35px 70px 70px;
+    justify-content: space-between;
+}
+.filter-header {
+    margin-bottom: 40px;
+}
+.filter-header__title {
+}
+.filter-header__subtitle {
+    display: flex;
+    column-gap: 10px;
+}
+.filter-header__home-img {
+}
+.filter-header__arrow {
+}
+.filter-header__text {
+}
+
+.filter-list {
+    display: flex;
+    column-gap: 70px;
+}
+.filter-list__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.filter-list__point {
+    display: flex;
+    column-gap: 19.05px;
+    align-items: center;
+}
+
+.filter-list__point input { 
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.filter-list__title {
+    margin-bottom: 15px;
+}
+
+.filter-list__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.cost-selection { 
+    display: flex;
+    
+}
+.cost-selection__price {
+    margin: 0;
+    padding: 0;
+}
+.cost-selection__item {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 33px;
+    
+    
+}
+
+.cost-selection__item--range {
+    
+}
+.cost-selection__title {
+}
+.cost-selection__input {
+    margin: 0;
+    padding: 0;
+    padding: 13px 2px;
+    border: 0;
+    background: transparent;
+    border-radius: 4px 0 0 4px;
+    outline: 2px solid white;
+}
+.cost-selection__btns {
+}
+.cost-selection__btn {
+}
+
