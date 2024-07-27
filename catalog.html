@@ -56,58 +56,58 @@
             </div>
         </header>
         <main class="main">
-            <div class="filter">
-                <div class="filter-header">
-                    <h1 class="filter-header__title">Гостиницы Седоны</h1>
-                    <ul class="filter-header__subtitle">
-                        <li class="filter-header__home-img">
+            <div class="catalog-head">
+                <h1 class="catalog-head__title">Гостиницы Седоны</h1>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="index.html" class="breadcrumbs__link">
                             <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M0.162109 6.1499L6.16211 0.649902L12.1621 6.1499V12.3499H0.162109V6.1499ZM1.16211 6.5499V11.3499H11.1621V6.5499L6.16211 2.0499L1.16211 6.5499ZM5.16211 10.3499H4.16211V6.84985H8.16211V10.3499H7.16211V7.84985H5.16211V10.3499Z"
                                     fill="white" />
                             </svg>
-                        </li>
-                        <li class="filter-header__arrow">></li>
-                        <li class="filter-header__text">Гостиницы</span>
-                    </ul>
-                </div>
-                <div class="filter-list">
-                    <div class="filter-list__content">
-                        <ul class="filter-list__item">
-                            <li class="filter-list__point"> <!--Возможно будет лучше назвать filter-list__item-point-->
-                                <p class="filter-list__title">Инфраструктура:</p>
-                            </li>
-                            <li class="filter-list__point">
-                                <input type="checkbox" class="filter-list__flag">
-                                <label class="filter-list__text">Бассейн</label>
-                            </li>
-                            <li class="filter-list__point">
-                                <input type="checkbox" class="filter-list__flag">
-                                <label class="filter-list__text">Парковка</label>
-                            </li>
-                            <li class="filter-list__point">
-                                <input type="checkbox" class="filter-list__flag">
-                                <label class="filter-list__text">Wi-Fi</label>
-                            </li>
-                        </ul>
-                        <ul class="filter-list__item">
-                            <li class="filter-list__point">
-                                <p class="filter-list__title">Тип Жилья:</p>
-                            </li>
-                            <li class="filter-list__point">
-                                <input type="radio" class="filter-list__flag">
-                                <label class="filter-list__text">Гостиница</label>
-                            </li>
-                            <li class="filter-list__point">
-                                <input type="radio" class="filter-list__flag">
-                                <label class="filter-list__text">Мотель</label>
-                            </li>
-                            <li class="filter-list__point">
-                                <input type="radio" class="filter-list__flag">
-                                <label class="filter-list__text">Апартаменты</label>
-                            </li>
-                        </ul>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">></li>
+                    <li class="breadcrumbs__item"><span class="breadcrumbs__current">Гостиницы</span></li>
+                </ul>
+                <div class="catalog-filter">
+                    <div class="catalog-filter__content">
+                        <div class="catalog-filter__item">
+                            <p class="catalog-filter__title">Инфраструктура:</p>
+                            <form action="" class="catalog-filter__form">
+                                <div class="catalog-filter__point">
+                                    <input type="checkbox" class="catalog-filter__flag">
+                                    <label class="catalog-filter__text">Бассейн</label>
+                                </div>
+                                <div class="catalog-filter__point">
+                                    <input type="checkbox" class="catalog-filter__flag">
+                                    <label class="catalog-filter__text">Парковка</label>
+                                </div>
+                                <div class="catalog-filter__point">
+                                    <input type="checkbox" class="catalog-filter__flag">
+                                    <label class="catalog-filter__text">Wi-Fi</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="catalog-filter__item">
+                            <p class="catalog-filter__title">Тип Жилья:</p>
+                            <form action="" class="catalog-filter__form">
+                                <div class="catalog-filter__point">
+                                    <input type="radio" class="catalog-filter__flag">
+                                    <label class="catalog-filter__text">Гостиница</label>
+                                </div>
+                                <div class="catalog-filter__point">
+                                    <input type="radio" class="catalog-filter__flag">
+                                    <label class="catalog-filter__text">Мотель</label>
+                                </div>
+                                <div class="catalog-filter__point">
+                                    <input type="radio" class="catalog-filter__flag">
+                                    <label class="catalog-filter__text">Апартаменты</label>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <div class="cost-selection">
                         <ul class="cost-selection__price">
@@ -122,26 +122,24 @@
                                         class="cost-selection__input cost-selection__input--border-right">
                                     <input type="range" name="range-price" class="cost-selection__range-price">
                                 </li>
-                                <div class="cost-selection__btns"> <!-- Больше ничего в голову не пришло:( -->
-                                    <button class="base-button cost-selection__btn">Применить</button>
-                                    <button class="cost-selection__btn--border">Сбросить</button>
+                                <div class="catalog-filter__button-group"> 
+                                    <button class="base-button catalog-filter__button">Применить</button>
+                                    <button class="catalog-filter__button--border">Сбросить</button>
                                 </div>
                             </div>
                         </ul>
                     </div>
                 </div>
             </div>
-
-
-            <div class="catalog">
-                <div class="catalog__sort">
-                    <h2 class="catalog__title">Найдено гостиниц: 38</h2>
-                    <select class="catalog__select">
-                        <option value="Сначала дешевые" class="catalog__point">Сначала дешевые</option>
-                        <option value="Сначала дорогие" class="catalog__point">Сначала дорогие</option>
+            <div class="catalog-results">
+                <div class="catalog-results__sort">
+                    <p class="catalog-results__title">Найдено гостиниц: 38</p>
+                    <select class="catalog-results__select">
+                        <option value="Сначала дешевые" class="catalog-results__point">Сначала дешевые</option>
+                        <option value="Сначала дорогие" class="catalog-results__point">Сначала дорогие</option>
                     </select>
-                    <li class="catalog__item">
-                        <button class="catalog__btn">
+                    <div class="catalog-results__item">
+                        <button class="catalog-results__btn">
                             <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 0H0V6H4V0Z" fill="black" />
@@ -152,14 +150,14 @@
                                 <path d="M10 8H6V14H10V8Z" fill="black" />
                             </svg>
                         </button>
-                        <button class="catalog__btn">
+                        <button class="catalog-results__btn">
                             <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 12H0V14H16V12Z" fill="black" />
                                 <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
                             </svg>
                         </button>
-                        <button class="catalog__btn">
+                        <button class="catalog-results__btn">
                             <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 0H0V2H2V0Z" fill="black" />
@@ -172,174 +170,127 @@
                                 <path d="M16 12H4V14H16V12Z" fill="black" />
                             </svg>
                         </button>
-                        </li>
+                    </div>
                 </div>
-                <ul class="catalog-list">
-                    <div class="catalog-list__container">
-                        <li class="catalog-list__item">
-                            <img src="img/hotel-1.jpg" alt="" class="catalog-list__img">
-                            <p class="catalog-list__title">Amara Resort & Spa</p>
-                            <ul class="catalog-list__subtitle">
-                                <li class="catalog-list__text">Гостиница</li>
-                                <li class="catalog-list__price">От 4000 ₽</li>
-                            </ul>
-                            <div class="catalog-list__action">
-                                <a class="base-button catalog-list__btn">Подробнее</a>
-                                <a class="base-button catalog-list__btn catalog-list__btn--blue">В избранное</a>
+                <div class="catalog-list">
+                    <ul class="catalog-results__list">
+                        <li class="catalog-results__point">
+                            <div class="object-card">
+                                <img src="img/hotel-1.jpg" alt="" class="object-card__img">
+                                <p class="object-card__title">Amara Resort & Spa</p>
+                                <ul class="object-card__subtitle">
+                                    <li class="object-card__text">Гостиница</li>
+                                    <li class="object-card__price">От 4000 ₽</li>
+                                </ul>
+                                <div class="object-card__action">
+                                    <a class="base-button object-card__btn">Подробнее</a>
+                                    <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
+                                </div>
+                                <ul class="object-card__rating">
+                                    <li class="object-card__star">
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                    </li>
+                                    <li class="object-card__rating-text">Рейтинг: 8,5</li>
+                                </ul>
                             </div>
-                            <ul class="catalog-list__rating">
-                                <li class="catalog-list__star">
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                </li>
-                                <li class="catalog-list__rating-text">Рейтинг: 8,5</li>
-                            </ul>
+                        </li>
+                    </ul>
+                    <div class="catalog-list__container">
+                        <li class="catalog-results__point">
+                            <div class="object-card">
+                                <img src="img/hotel-2.jpg" alt="" class="object-card__img">
+                                <p class="object-card__title">Villas at Poco Diablo</p>
+                                <ul class="object-card__subtitle">
+                                    <li class="object-card__text">Гостиница</li>
+                                    <li class="object-card__price">От 5000 ₽</li>
+                                </ul>
+                                <div class="object-card__action">
+                                    <a class="base-button object-card__btn">Подробнее</a>
+                                    <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
+                                </div>
+                                <ul class="object-card__rating">
+                                    <li class="object-card__star">
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                    </li>
+                                    <li class="object-card__rating-text">Рейтинг: 9,2</li>
+                                </ul>
+                            </div>
                         </li>
                     </div>
                     <div class="catalog-list__container">
-                        <li class="catalog-list__item">
-                            <img src="img/hotel-2.jpg" alt="" class="catalog-list__img">
-                            <p class="catalog-list__title">Villas at Poco Diablo</p>
-                            <ul class="catalog-list__subtitle">
-                                <li class="catalog-list__text">Гостиница</li>
-                                <li class="catalog-list__price">От 5000 ₽</li>
-                            </ul>
-                            <div class="catalog-list__action">
-                                <a class="base-button catalog-list__btn">Подробнее</a>
-                                <a class="base-button catalog-list__btn catalog-list__btn--blue">В избранное</a>
+                        <li class="catalog-results__point">
+                            <div class="object-card">
+                                <img src="img/hotel-3.jpg" alt="" class="object-card__img">
+                                <p class="object-card__title">Desert Quail Inn</p>
+                                <ul class="object-card__subtitle">
+                                    <li class="object-card__text">Гостиница</li>
+                                    <li class="object-card__price">От 2500 ₽</li>
+                                </ul>
+                                <div class="object-card__action">
+                                    <a class="base-button object-card__btn">Подробнее</a>
+                                    <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
+                                </div>
+                                <ul class="object-card__rating">
+                                    <li class="object-card__star">
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                    </li>
+                                    <li class="object-card__rating-text">Рейтинг: 6,9</li>
+                                </ul>
                             </div>
-                            <ul class="catalog-list__rating">
-                                <li class="catalog-list__star">
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                </li>
-                                <li class="catalog-list__rating-text">Рейтинг: 9,2</li>
-                            </ul>
                         </li>
                     </div>
                     <div class="catalog-list__container">
-                        <li class="catalog-list__item">
-                            <img src="img/hotel-3.jpg" alt="" class="catalog-list__img">
-                            <p class="catalog-list__title">Desert Quail Inn</p>
-                            <ul class="catalog-list__subtitle">
-                                <li class="catalog-list__text">Гостиница</li>
-                                <li class="catalog-list__price">От 2500 ₽</li>
-                            </ul>
-                            <div class="catalog-list__action">
-                                <a class="base-button catalog-list__btn">Подробнее</a>
-                                <a class="base-button catalog-list__btn catalog-list__btn--blue">В избранное</a>
+                        <li class="catalog-results__point">
+                            <div class="object-card">
+                                <img src="img/hotel-4.jpg" alt="" class="object-card__img">
+                                <p class="object-card__title">GreenTree Inn</p>
+                                <ul class="object-card__subtitle">
+                                    <li class="object-card__text">Гостиница</li>
+                                    <li class="object-card__price">От 1500 ₽</li>
+                                </ul>
+                                <div class="object-card__action">
+                                    <a class="base-button object-card__btn">Подробнее</a>
+                                    <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
+                                </div>
+                                <ul class="object-card__rating">
+                                    <li class="object-card__star">
+                                        <span class="object-card-rating__star">★</span>
+                                        <span class="object-card-rating__star">★</span>
+                                    </li>
+                                    <li class="object-card__rating-text">Рейтинг: 5,0</li>
+                                </ul>
                             </div>
-                            <ul class="catalog-list__rating">
-                                <li class="catalog-list__star">
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                    
-                                </li>
-                                <li class="catalog-list__rating-text">Рейтинг: 6,9</li>
-                            </ul>
                         </li>
                     </div>
-                    <div class="catalog-list__container">
-                        <li class="catalog-list__item">
-                            <img src="img/hotel-4.jpg" alt="" class="catalog-list__img">
-                            <p class="catalog-list__title">GreenTree Inn</p>
-                            <ul class="catalog-list__subtitle">
-                                <li class="catalog-list__text">Гостиница</li>
-                                <li class="catalog-list__price">От 1500 ₽</li>
-                            </ul>
-                            <div class="catalog-list__action">
-                                <a class="base-button catalog-list__btn">Подробнее</a>
-                                <a class="base-button catalog-list__btn catalog-list__btn--blue">В избранное</a>
-                            </div>
-                            <ul class="catalog-list__rating">
-                                <li class="catalog-list__star">
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 0L11.1 6.5H18L12.4 10.5L14.6 17L9 13L3.4 17L5.6 10.5L0 6.5H6.9L9 0Z"
-                                            fill="#83B3D3" />
-                                    </svg>
-                                    
-                                </li>
-                                <li class="catalog-list__rating-text">Рейтинг: 5,0</li>
-                            </ul>
-                        </li>
-                    </div>
-                </ul>
-
+                </div>
                 <hr>
-                <ul class="catalog-pagination">
-                    <li class="catalog-pagination__item">
-                        <a href="" class="catalog-pagination__point">1</a>
-                        <a href="" class="catalog-pagination__point">2</a>
-                        <a href="" class="catalog-pagination__point">3</a>
-                        <a href="" class="catalog-pagination__point">4</a>
-                        <a href="" class="catalog-pagination__point">...</a>
-                        <a href="" class="catalog-pagination__point">10</a>
-                    </li>
-                    <li class="catalog-pagination__item">
-                        <label class="catalog-point__label">Гостиниц на странице:</label>
-                        <select name="" id="" class="catalog-pagination__select">
-                            <option value="1" class="catalog-pagination__select-item">1</option>
-                            <option value="2" class="catalog-pagination__select-item">2</option>
-                            <option value="3" class="catalog-pagination__select-item">3</option>
-                            <option value="4" class="catalog-pagination__select-item">4</option>
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item"><a href="" class="pagination__point">1</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__point">2</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__point">3</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__point">4</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__point">...</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__point">10</a></li>
+                    </ul>
+                    <div class="number-guest">
+                        <label class="number-guest__label">Гостиниц на странице:</label>
+                        <select name="" id="" class="number-guest__select">
+                            <option value="1" class="number-guest__select-item">1</option>
+                            <option value="2" class="number-guest__select-item">2</option>
+                            <option value="3" class="number-guest__select-item">3</option>
+                            <option value="4" class="number-guest__select-item">4</option>
                         </select>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
             <div class="subscribe subscribe--catalog">
                 <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
