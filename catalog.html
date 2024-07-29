@@ -74,61 +74,67 @@
                 </ul>
                 <div class="catalog-filter">
                     <div class="catalog-filter__content">
-                        <div class="catalog-filter__item">
-                            <p class="catalog-filter__title">Инфраструктура:</p>
-                            <form action="" class="catalog-filter__form">
-                                <div class="catalog-filter__point">
-                                    <input type="checkbox" class="catalog-filter__flag">
-                                    <label class="catalog-filter__text">Бассейн</label>
-                                </div>
-                                <div class="catalog-filter__point">
-                                    <input type="checkbox" class="catalog-filter__flag">
-                                    <label class="catalog-filter__text">Парковка</label>
-                                </div>
-                                <div class="catalog-filter__point">
-                                    <input type="checkbox" class="catalog-filter__flag">
-                                    <label class="catalog-filter__text">Wi-Fi</label>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="catalog-filter__item">
-                            <p class="catalog-filter__title">Тип Жилья:</p>
-                            <form action="" class="catalog-filter__form">
-                                <div class="catalog-filter__point">
-                                    <input type="radio" class="catalog-filter__flag">
-                                    <label class="catalog-filter__text">Гостиница</label>
-                                </div>
-                                <div class="catalog-filter__point">
-                                    <input type="radio" class="catalog-filter__flag">
-                                    <label class="catalog-filter__text">Мотель</label>
-                                </div>
-                                <div class="catalog-filter__point">
-                                    <input type="radio" class="catalog-filter__flag">
-                                    <label class="catalog-filter__text">Апартаменты</label>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="cost-selection">
-                        <ul class="cost-selection__price">
-                            <li class="cost-selection__item">
-                                <p class="cost-selection__title">Стоимость, ₽:</p>
-                            </li>
-                            <div class="test">
-                                <li class="cost-selection__item cost-selection__item--range">
-                                    <input type="text" placeholder="от"
-                                        class="cost-selection__input cost-selection__input--border-left">
-                                    <input type="text" placeholder="до"
-                                        class="cost-selection__input cost-selection__input--border-right">
-                                    <input type="range" name="range-price" class="cost-selection__range-price">
-                                </li>
-                                <div class="catalog-filter__button-group"> 
-                                    <button class="base-button catalog-filter__button">Применить</button>
-                                    <button class="catalog-filter__button--border">Сбросить</button>
-                                </div>
+                        <fieldset class="catalog-filter__group">
+                            <legend class="catalog-filter__title">Инфраструктура:</legend>
+                            <div class="catalog-filter__checkbox-wrap">
+                                <label class="catalog-filter__control">
+                                    <input class="catalog-filter__control-input" type="checkbox">
+                                    <span class="catalog-filter__control-mark"></span>
+                                    <span class="catalog-filter__control-label">Бассейн</span>
+                                </label>
+                                <label class="catalog-filter__control">
+                                    <input class="catalog-filter__control-input" type="checkbox">
+                                    <span class="catalog-filter__control-mark"></span>
+                                    <span class="catalog-filter__control-label">Парковка</span>
+                                </label>
+                                <label class="catalog-filter__control">
+                                    <input class="catalog-filter__control-input" type="checkbox">
+                                    <span class="catalog-filter__control-mark"></span>
+                                    <span class="catalog-filter__control-label">Wi-Fi</span>
+                                </label>
                             </div>
-                        </ul>
+                        </fieldset>
+
+                        <fieldset class="catalog-filter__group">
+                            <legend class="catalog-filter__title">Тип Жилья:</legend>
+                            <div class="catalog-filter__checkbox-wrap">
+                                <label class="catalog-filter__control">
+                                    <input class="catalog-filter__control-input" type="radio">
+                                    <span class="catalog-filter__control-mark"></span>
+                                    <span class="catalog-filter__control-label">Гостиница</span>
+                                </label>
+                                <label class="catalog-filter__control">
+                                    <input class="catalog-filter__control-input" type="radio">
+                                    <span class="catalog-filter__control-mark"></span>
+                                    <span class="catalog-filter__control-label">Мотель</span>
+                                </label>
+                                <label class="catalog-filter__control">
+                                    <input class="catalog-filter__control-input" type="radio">
+                                    <span class="catalog-filter__control-mark"></span>
+                                    <span class="catalog-filter__control-label">Апартаменты</span>
+                                </label>
+                            </div>
+                        </fieldset>
                     </div>
+                    
+                    <fieldset class="cost-selection">
+                        <legend class="cost-selection__title">Стоимость, ₽:</legend>
+                        <div class="cost-selection__item">
+                            <label class="cost-selection__control">
+                                <input type="text" placeholder="от"
+                                    class="cost-selection__input cost-selection__input--border-left">
+                                <input type="text" placeholder="до"
+                                    class="cost-selection__input cost-selection__input--border-right">
+                            </label>
+                            <label for="">
+                                <input type="range" name="range-price" class="cost-selection__range-price">
+                            </label>
+                        </div>
+                        <div class="catalog-filter__button-group">
+                            <button class="base-button catalog-filter__button">Применить</button>
+                            <button class="catalog-filter__button--border">Сбросить</button>
+                        </div>
+                    </fieldset>
                 </div>
             </div>
             <div class="catalog-results">
@@ -174,28 +180,26 @@
                 </div>
                 <div class="catalog-list">
                     <ul class="catalog-results__list">
-                        <li class="catalog-results__point">
-                            <div class="object-card">
-                                <img src="img/hotel-1.jpg" alt="" class="object-card__img">
-                                <p class="object-card__title">Amara Resort & Spa</p>
-                                <ul class="object-card__subtitle">
-                                    <li class="object-card__text">Гостиница</li>
-                                    <li class="object-card__price">От 4000 ₽</li>
-                                </ul>
-                                <div class="object-card__action">
-                                    <a class="base-button object-card__btn">Подробнее</a>
-                                    <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
-                                </div>
-                                <ul class="object-card__rating">
-                                    <li class="object-card__star">
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                    </li>
-                                    <li class="object-card__rating-text">Рейтинг: 8,5</li>
-                                </ul>
+                        <li class="object-card">
+                            <img src="img/hotel-1.jpg" alt="" class="object-card__img">
+                            <p class="object-card__title">Amara Resort & Spa</p>
+                            <ul class="object-card__subtitle">
+                                <li class="object-card__text">Гостиница</li>
+                                <li class="object-card__price">От 4000 ₽</li>
+                            </ul>
+                            <div class="object-card__action">
+                                <a class="base-button object-card__btn">Подробнее</a>
+                                <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
                             </div>
+                            <ul class="object-card__rating">
+                                <li class="object-card__star">
+                                    <span class="object-card-rating__star">★</span>
+                                    <span class="object-card-rating__star">★</span>
+                                    <span class="object-card-rating__star">★</span>
+                                    <span class="object-card-rating__star">★</span>
+                                </li>
+                                <li class="object-card__rating-text">Рейтинг: 8,5</li>
+                            </ul>
                         </li>
                     </ul>
                     <div class="catalog-list__container">
@@ -224,50 +228,46 @@
                         </li>
                     </div>
                     <div class="catalog-list__container">
-                        <li class="catalog-results__point">
-                            <div class="object-card">
-                                <img src="img/hotel-3.jpg" alt="" class="object-card__img">
-                                <p class="object-card__title">Desert Quail Inn</p>
-                                <ul class="object-card__subtitle">
-                                    <li class="object-card__text">Гостиница</li>
-                                    <li class="object-card__price">От 2500 ₽</li>
-                                </ul>
-                                <div class="object-card__action">
-                                    <a class="base-button object-card__btn">Подробнее</a>
-                                    <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
-                                </div>
-                                <ul class="object-card__rating">
-                                    <li class="object-card__star">
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                    </li>
-                                    <li class="object-card__rating-text">Рейтинг: 6,9</li>
-                                </ul>
+                        <li class="object-card">
+                            <img src="img/hotel-3.jpg" alt="" class="object-card__img">
+                            <p class="object-card__title">Desert Quail Inn</p>
+                            <ul class="object-card__subtitle">
+                                <li class="object-card__text">Гостиница</li>
+                                <li class="object-card__price">От 2500 ₽</li>
+                            </ul>
+                            <div class="object-card__action">
+                                <a class="base-button object-card__btn">Подробнее</a>
+                                <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
                             </div>
+                            <ul class="object-card__rating">
+                                <li class="object-card__star">
+                                    <span class="object-card-rating__star">★</span>
+                                    <span class="object-card-rating__star">★</span>
+                                    <span class="object-card-rating__star">★</span>
+                                </li>
+                                <li class="object-card__rating-text">Рейтинг: 6,9</li>
+                            </ul>
                         </li>
                     </div>
                     <div class="catalog-list__container">
-                        <li class="catalog-results__point">
-                            <div class="object-card">
-                                <img src="img/hotel-4.jpg" alt="" class="object-card__img">
-                                <p class="object-card__title">GreenTree Inn</p>
-                                <ul class="object-card__subtitle">
-                                    <li class="object-card__text">Гостиница</li>
-                                    <li class="object-card__price">От 1500 ₽</li>
-                                </ul>
-                                <div class="object-card__action">
-                                    <a class="base-button object-card__btn">Подробнее</a>
-                                    <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
-                                </div>
-                                <ul class="object-card__rating">
-                                    <li class="object-card__star">
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                    </li>
-                                    <li class="object-card__rating-text">Рейтинг: 5,0</li>
-                                </ul>
+                        <li class="object-card">
+                            <img src="img/hotel-4.jpg" alt="" class="object-card__img">
+                            <p class="object-card__title">GreenTree Inn</p>
+                            <ul class="object-card__subtitle">
+                                <li class="object-card__text">Гостиница</li>
+                                <li class="object-card__price">От 1500 ₽</li>
+                            </ul>
+                            <div class="object-card__action">
+                                <a class="base-button object-card__btn">Подробнее</a>
+                                <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
                             </div>
+                            <ul class="object-card__rating">
+                                <li class="object-card__star">
+                                    <span class="object-card-rating__star">★</span>
+                                    <span class="object-card-rating__star">★</span>
+                                </li>
+                                <li class="object-card__rating-text">Рейтинг: 5,0</li>
+                            </ul>
                         </li>
                     </div>
                 </div>
