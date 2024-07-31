@@ -22,6 +22,8 @@
   font-style: italic;
 }
 
+
+
 /* Теги */
 body,
 ul,
@@ -62,6 +64,9 @@ html {
   height: 100%;
 }
 
+button, a{
+  cursor: pointer;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -77,8 +82,6 @@ html {
 
 
 .wrapper {
-  position: relative;
-  z-index: 2;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   min-height: 100%;
@@ -89,16 +92,14 @@ html {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.main {
-  z-index: 1;
-}
+
 .base-button {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 35px;
   color: white;
-  background-color: #756157;
+  background-color: rgba(117, 97, 87, 1);
   border-radius: 4px;
   border: 0;
   text-decoration: none;
@@ -108,9 +109,9 @@ html {
   line-height: 20px;
 } 
 
-.base-button:hover {
+/* .base-button:hover {
   filter: contrast(130%);
-  /* filter: brightness(0.9); */
+  
   
 }
 
@@ -121,13 +122,12 @@ html {
 .base-button:active {
   filter: contrast(80%);
 }
+
 .base-button--blue {
   background-color: #82B3D3;
-}
+} */
 
 .header {
-  height: 66px;
-  z-index: 2;
 }
 
 .header__container {
@@ -140,6 +140,8 @@ html {
 }
 
 .header__logo {
+  position: relative;
+  z-index: 1;
   display: block;
   margin-right: 47px;
 }
@@ -148,6 +150,7 @@ html {
   display: block;
   width: 139px;
   height: auto;
+  margin-bottom: -5px;
 }
 
 .menu {
@@ -209,6 +212,7 @@ html {
   background-color: #7DB54F;
   border-radius: 50%;
 }
+
 
 .promo {
   position: relative;
@@ -379,6 +383,7 @@ html {
   letter-spacing: -1.5px;
 }
 
+
 .subscribe {
   display: flex;
   flex-direction: column;
@@ -430,7 +435,7 @@ html {
 }
 
 .subscribe__btn {
-  background: #82B3D3;
+  background-color: rgba(130, 179, 211, 1);
   border-radius: 0 10px 10px 0;
   font-size: 17px;
   font-weight: 700;
@@ -453,33 +458,7 @@ html {
 
 }
 
-.footer-social__item:active {
-  opacity: 0.4;
-}
 
-.footer-social__item:hover {
-  filter: brightness(0.9);
-}
-
-.footer-social__link {
-  text-decoration: none;
-}
-
-.footer-social__item:focus {
-  filter: brightness(0.9);
-}
-
-.footer__logo-link:hover {
-  opacity: 0.5;
-}
-
-.footer__logo-link:focus {
-  opacity: 0.5;
-}
-
-.footer__logo-link:active {
-  opacity: 0.3;
-}
 .footer__phone {
   text-decoration: none;
   color: black;
@@ -489,15 +468,3 @@ html {
   padding-left: 10px;
 }
 
-.footer__phone:hover {
-  color:#756157;
-}
-
-.footer__phone:focus {
-  color: #756157 ;
-}
-
-.footer__phone:active {
-  color: #756157;
-  opacity: 0.3;
-}

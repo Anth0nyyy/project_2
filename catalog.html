@@ -9,7 +9,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/catalog.css">
-    <title>Test</title>
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/active.css">
+    <title>Hostel</title>
 </head>
 
 <body>
@@ -69,11 +71,10 @@
                             </svg>
                         </a>
                     </li>
-                    <li class="breadcrumbs__item">></li>
                     <li class="breadcrumbs__item"><span class="breadcrumbs__current">Гостиницы</span></li>
                 </ul>
                 <div class="catalog-filter">
-                    <div class="catalog-filter__content">
+                    <form class="catalog-filter__form">
                         <fieldset class="catalog-filter__group">
                             <legend class="catalog-filter__title">Инфраструктура:</legend>
                             <div class="catalog-filter__checkbox-wrap">
@@ -94,7 +95,6 @@
                                 </label>
                             </div>
                         </fieldset>
-
                         <fieldset class="catalog-filter__group">
                             <legend class="catalog-filter__title">Тип Жилья:</legend>
                             <div class="catalog-filter__checkbox-wrap">
@@ -115,8 +115,8 @@
                                 </label>
                             </div>
                         </fieldset>
-                    </div>
-                    
+                    </form>
+
                     <fieldset class="cost-selection">
                         <legend class="cost-selection__title">Стоимость, ₽:</legend>
                         <div class="cost-selection__item">
@@ -129,22 +129,35 @@
                             <label for="">
                                 <input type="range" name="range-price" class="cost-selection__range-price">
                             </label>
-                        </div>
-                        <div class="catalog-filter__button-group">
-                            <button class="base-button catalog-filter__button">Применить</button>
-                            <button class="catalog-filter__button--border">Сбросить</button>
+                            <!-- <div class="catalog-filter__range">
+                                <div class="catalog-filter__range-scale">
+                                  <div class="catalog-filter__range-bar" style="left: 0; width: 230px">
+                                    <button class="range-toggle range-toggle--min" type="button">
+                                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                                    </button>
+                                    <button class="range-toggle range-toggle--max" type="button">
+                                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div> -->
                         </div>
                     </fieldset>
+
+                    <div class="catalog-filter__button-group">
+                        <button class="base-button catalog-filter__button">Применить</button>
+                        <button class="catalog-filter__button--border">Сбросить</button>
+                    </div>
                 </div>
             </div>
             <div class="catalog-results">
-                <div class="catalog-results__sort">
+                <div class="catalog-results__head">
                     <p class="catalog-results__title">Найдено гостиниц: 38</p>
                     <select class="catalog-results__select">
                         <option value="Сначала дешевые" class="catalog-results__point">Сначала дешевые</option>
                         <option value="Сначала дорогие" class="catalog-results__point">Сначала дорогие</option>
                     </select>
-                    <div class="catalog-results__item">
+                    <div class="catalog-results__view">
                         <button class="catalog-results__btn">
                             <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -178,118 +191,96 @@
                         </button>
                     </div>
                 </div>
-                <div class="catalog-list">
-                    <ul class="catalog-results__list">
-                        <li class="object-card">
+
+                <ul class="catalog-results__list">
+
+                    <li class="catalog-results__item">
+                        <div class="object-card">
                             <img src="img/hotel-1.jpg" alt="" class="object-card__img">
                             <p class="object-card__title">Amara Resort & Spa</p>
-                            <ul class="object-card__subtitle">
-                                <li class="object-card__text">Гостиница</li>
-                                <li class="object-card__price">От 4000 ₽</li>
-                            </ul>
-                            <div class="object-card__action">
-                                <a class="base-button object-card__btn">Подробнее</a>
-                                <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
+                            <p class="object-card__text">Гостиница</p>
+                            <p class="object-card__price">От 4000 ₽</p>  
+                            <a class="base-button object-card__btn">Подробнее</a>
+                            <button class="base-button object-card__btn object-card__btn--blue">В избранное</button>
+                            <div class="object-card__rating">
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
                             </div>
-                            <ul class="object-card__rating">
-                                <li class="object-card__star">
-                                    <span class="object-card-rating__star">★</span>
-                                    <span class="object-card-rating__star">★</span>
-                                    <span class="object-card-rating__star">★</span>
-                                    <span class="object-card-rating__star">★</span>
-                                </li>
-                                <li class="object-card__rating-text">Рейтинг: 8,5</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="catalog-list__container">
-                        <li class="catalog-results__point">
-                            <div class="object-card">
-                                <img src="img/hotel-2.jpg" alt="" class="object-card__img">
-                                <p class="object-card__title">Villas at Poco Diablo</p>
-                                <ul class="object-card__subtitle">
-                                    <li class="object-card__text">Гостиница</li>
-                                    <li class="object-card__price">От 5000 ₽</li>
-                                </ul>
-                                <div class="object-card__action">
-                                    <a class="base-button object-card__btn">Подробнее</a>
-                                    <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
-                                </div>
-                                <ul class="object-card__rating">
-                                    <li class="object-card__star">
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                        <span class="object-card-rating__star">★</span>
-                                    </li>
-                                    <li class="object-card__rating-text">Рейтинг: 9,2</li>
-                                </ul>
+                            <p class="object-card__rating-text">Рейтинг: 8,5</p>
+                        </div>
+                    </li>
+                
+                    <li class="catalog-results__item">
+                        <div class="object-card">
+                            <img src="img/hotel-2.jpg" alt="" class="object-card__img">
+                            <p class="object-card__title">Villas at Poco Diablo</p>
+                            <p class="object-card__text">Гостиница</p>
+                            <p class="object-card__price">От 5000 ₽</p>  
+                            <a class="base-button object-card__btn">Подробнее</a>
+                            <button class="base-button object-card__btn object-card__btn--blue">В избранное</button>
+                            <div class="object-card__rating">
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
                             </div>
-                        </li>
-                    </div>
-                    <div class="catalog-list__container">
-                        <li class="object-card">
+                            <p class="object-card__rating-text">Рейтинг: 9,2</p>
+                        </div>
+                    </li>
+
+                    <li class="catalog-results__item">
+                        <div class="object-card">
                             <img src="img/hotel-3.jpg" alt="" class="object-card__img">
                             <p class="object-card__title">Desert Quail Inn</p>
-                            <ul class="object-card__subtitle">
-                                <li class="object-card__text">Гостиница</li>
-                                <li class="object-card__price">От 2500 ₽</li>
-                            </ul>
-                            <div class="object-card__action">
-                                <a class="base-button object-card__btn">Подробнее</a>
-                                <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
+                            <p class="object-card__text">Гостиница</p>
+                            <p class="object-card__price">От 2500 ₽</p>  
+                            <a class="base-button object-card__btn">Подробнее</a>
+                            <button class="base-button object-card__btn object-card__btn--blue">В избранное</button>
+                            <div class="object-card__rating">
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
                             </div>
-                            <ul class="object-card__rating">
-                                <li class="object-card__star">
-                                    <span class="object-card-rating__star">★</span>
-                                    <span class="object-card-rating__star">★</span>
-                                    <span class="object-card-rating__star">★</span>
-                                </li>
-                                <li class="object-card__rating-text">Рейтинг: 6,9</li>
-                            </ul>
-                        </li>
-                    </div>
-                    <div class="catalog-list__container">
-                        <li class="object-card">
+                            <p class="object-card__rating-text">Рейтинг: 6,9</p>
+                        </div>
+                    </li>
+
+                    <li class="catalog-results__item">
+                        <div class="object-card">
                             <img src="img/hotel-4.jpg" alt="" class="object-card__img">
                             <p class="object-card__title">GreenTree Inn</p>
-                            <ul class="object-card__subtitle">
-                                <li class="object-card__text">Гостиница</li>
-                                <li class="object-card__price">От 1500 ₽</li>
-                            </ul>
-                            <div class="object-card__action">
-                                <a class="base-button object-card__btn">Подробнее</a>
-                                <a class="base-button object-card__btn object-card__btn--blue">В избранное</a>
+                            <p class="object-card__text">Гостиница</p>
+                            <p class="object-card__price">От 1500 ₽</p>  
+                            <a class="base-button object-card__btn">Подробнее</a>
+                            <button class="base-button object-card__btn object-card__btn--blue">В избранное</button>
+                            <div class="object-card__rating">
+                                <span class="object-card-rating__star">★</span>
+                                <span class="object-card-rating__star">★</span>
                             </div>
-                            <ul class="object-card__rating">
-                                <li class="object-card__star">
-                                    <span class="object-card-rating__star">★</span>
-                                    <span class="object-card-rating__star">★</span>
-                                </li>
-                                <li class="object-card__rating-text">Рейтинг: 5,0</li>
-                            </ul>
-                        </li>
-                    </div>
-                </div>
-                <hr>
-                <div class="pagination">
-                    <ul class="pagination__list">
-                        <li class="pagination__item"><a href="" class="pagination__point">1</a></li>
-                        <li class="pagination__item"><a href="" class="pagination__point">2</a></li>
-                        <li class="pagination__item"><a href="" class="pagination__point">3</a></li>
-                        <li class="pagination__item"><a href="" class="pagination__point">4</a></li>
-                        <li class="pagination__item"><a href="" class="pagination__point">...</a></li>
-                        <li class="pagination__item"><a href="" class="pagination__point">10</a></li>
+                            <p class="object-card__rating-text">Рейтинг: 5,0</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="catalog-results_bottom">
+                    <ul class="pagination">
+                        <li class="pagination__item"><a href="" class="pagination__link">1</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__link">2</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__link">3</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__link">4</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__link">...</a></li>
+                        <li class="pagination__item"><a href="" class="pagination__link">10</a></li>
                     </ul>
-                    <div class="number-guest">
-                        <label class="number-guest__label">Гостиниц на странице:</label>
-                        <select name="" id="" class="number-guest__select">
-                            <option value="1" class="number-guest__select-item">1</option>
-                            <option value="2" class="number-guest__select-item">2</option>
-                            <option value="3" class="number-guest__select-item">3</option>
-                            <option value="4" class="number-guest__select-item">4</option>
-                        </select>
-                    </div>
+
+                    <p class="catalog-results__description">Гостиниц на странице:</p>
+                    <select name="" id="" class="catalog-results__object-count">
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
                 </div>
             </div>
             <div class="subscribe subscribe--catalog">
@@ -337,6 +328,7 @@
                     </li>
                 </ul>
                 <a href="tel:+7 (812) 812-12-12" class="footer__phone">+7 (812) 812-12-12</a>
+                <div class="f">
                 <a href="https://htmlacademy.ru/study" class="footer__logo-link">
                     <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="black" />
